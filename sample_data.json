@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "name": "Tomato",
+      "description": "Tomatoes are the major dietary source of the antioxidant lycopene, which has been linked to many health benefits, including reduced risk of heart disease and cancer. They are also a great source of vitamin C, potassium, folate, and vitamin K."
+    },
+    {
+      "id": 2,
+      "name": "Potato",
+      "description": "Potatoes are a very good source of vitamin B6 and a good source of potassium, copper, vitamin C, manganese, phosphorus, niacin, dietary fiber, and pantothenic acid."
+    },
+    {
+      "id": 3,
+      "name": "Carrot",
+      "description": "Carrots are a particularly good source of beta carotene, fiber, vitamin K1, potassium, and antioxidants. They also have a number of health benefits. They're a weight-loss-friendly food and have been linked to lower cholesterol levels and improved eye health."
+    }
+  ]
+}
