@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  db:
+    container_name: plant_db
+    image: postgres:15.2-bullseye
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./_app_db:/var/lib/postgresql/data
+    env_file:
+      - db.env
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: plant_db

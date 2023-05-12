@@ -1,15 +1,25 @@
-# Build go module into a binary
-# Usage: make build
+# Define the name of the output binary
+BINARY_NAME := go-plant-scheduler
 
-# Glob files in src/ 
-SOURCES := $(shell find . -name '*.go' -path "./*")
+# Define the directory for the output binary
+BUILD_DIR := ./build
 
-build/go-plant-schedule:
-	go build -o build/go-plant-schedule .
+# Define the Go compiler command
+GO := go
 
-build: build/go-plant-schedule
-.PHONY: build
+# Define the Go linker flags
+LDFLAGS := -w -s
+
+# Define the build command
+BUILD_CMD := cd api && $(GO) build -ldflags "$(LDFLAGS)" -o ../$(BUILD_DIR)/$(BINARY_NAME)
+
+.PHONY: all build clean
+
+all: clean build
+
+build:
+	mkdir -p $(BUILD_DIR)
+	$(BUILD_CMD)
 
 clean:
-	rm -rf build
-.PHONY: clean
+	rm -rf $(BUILD_DIR)

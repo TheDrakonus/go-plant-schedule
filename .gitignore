@@ -1,2 +1,9 @@
+/target
+./*.env
+!.env.example
+db.env
+.env
+.vscode/
 build/
-.vscode/*
+_app_db/
+frontend/node_modules/
